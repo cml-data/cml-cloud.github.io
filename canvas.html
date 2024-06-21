@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Canvas Click Box</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create a canvas box element  --> 
+    <canvas id="tutorial" width="150" height="150"></canvas>
+    <p>
+      "Hello, Box World"
+    </p>
+    <script>
+      const canvas = document.getElementById('tutorial');
+      function clickme() {
+        console.log("clicked");
+        alert("box clicked!");
+      }
+
+      function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+        }
+      }
+      window.addEventListener("load", draw);
+      canvas.addEventListener("click", clickme);
+    </script>
+  </body>
+</html>
